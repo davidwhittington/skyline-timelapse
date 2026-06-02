@@ -1,0 +1,24 @@
+# Real env files — only the .example ships
+etc/timelapse.env
+*.env
+!*.env.example
+
+# rclone configs of any kind
+rclone.conf
+
+# Working dirs if anyone tests locally
+frames/
+out/
+*.jpg
+*.mp4
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Editor / OS noise
+.DS_Store
+.idea/
+.vscode/
+*.swp

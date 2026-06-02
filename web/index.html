@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Skyline Timelapse</title>
+<meta name="robots" content="index,follow" />
+<style>
+  :root { color-scheme: dark; }
+  html, body {
+    margin: 0;
+    background: #0a0a0c;
+    color: #d8d8dc;
+    font: 14px/1.5 ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+    height: 100%;
+  }
+  .wrap {
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: 1fr auto;
+  }
+  .stage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+  }
+  video {
+    width: min(100%, 1600px);
+    height: auto;
+    background: #000;
+    border-radius: 4px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+  }
+  footer {
+    padding: 16px 24px 24px;
+    text-align: center;
+    color: #6b6b72;
+    font-size: 12px;
+  }
+  footer a { color: #9a9aa2; text-decoration: none; }
+  footer a:hover { color: #d8d8dc; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <main class="stage">
+    <video src="latest.mp4" controls loop muted autoplay playsinline preload="metadata"></video>
+  </main>
+  <footer>
+    Yesterday's daylight, in about thirty seconds. Updated daily after dusk.
+  </footer>
+</div>
+</body>
+</html>

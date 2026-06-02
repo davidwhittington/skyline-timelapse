@@ -1,0 +1,11 @@
+[Unit]
+Description=Skyline timelapse — daily publish at 22:00 local
+
+[Timer]
+OnCalendar=*-*-* 22:00:00
+Persistent=true
+AccuracySec=1min
+Unit=timelapse-publish.service
+
+[Install]
+WantedBy=timers.target

@@ -1,0 +1,11 @@
+[Unit]
+Description=Skyline timelapse — capture cadence
+
+[Timer]
+OnBootSec=1min
+OnUnitActiveSec=60s
+AccuracySec=2s
+Unit=timelapse-capture.service
+
+[Install]
+WantedBy=timers.target

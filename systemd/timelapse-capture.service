@@ -1,0 +1,19 @@
+[Unit]
+Description=Skyline timelapse — single frame capture
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=timelapse
+Group=timelapse
+EnvironmentFile=/etc/timelapse/timelapse.env
+Environment=TIMELAPSE_ENV=/etc/timelapse/timelapse.env
+ExecStart=/opt/skyline-timelapse/bin/capture.sh
+
+# Hardening
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+PrivateTmp=true
+ReadWritePaths=/var/lib/timelapse /var/lock
